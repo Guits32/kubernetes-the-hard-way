@@ -32,7 +32,7 @@ This does the below:
     > If you choose to change these settings, please also update vagrant/ubuntu/vagrant/setup-hosts.sh
     > to add the additional hosts to the /etc/hosts default before running "vagrant up".
 
-- Set's IP addresses in the range 192.168.56
+- Set's IP addresses in the range 192.168.1
 
     | VM            |  VM Name               | Purpose       | IP            | Forwarded Port   | RAM  |
     | ------------  | ---------------------- |:-------------:| -------------:| ----------------:|-----:|
