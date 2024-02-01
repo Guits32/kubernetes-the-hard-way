@@ -44,9 +44,9 @@ echo $API_SERVICE
 The output should look like this. If you changed any of the defaults mentioned in the [prerequisites](./01-prerequisites.md) page, then addresses may differ.
 
 ```
-192.168.1.11
-192.168.1.12
-192.168.1.30
+192.168.1.20
+192.168.1.21
+192.168.1.10
 10.96.0.0/24
 10.96.0.1
 ```
