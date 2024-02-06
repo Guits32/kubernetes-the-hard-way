@@ -14,7 +14,7 @@ In our case we do the following steps on the `master-1` node, as we have set it 
 
 In this section you will provision a Certificate Authority that can be used to generate additional TLS certificates.
 
-Query IPs of hosts we will insert as certificate subject alternative names (SANs), which will be read from `/etc/hosts`. Note that doing this allows us to change the VM network range more easily from the default for these labs which is `192.168.1.0/24`
+Query IPs of hosts we will insert as certificate subject alternative names (SANs), which will be read from `/etc/hosts`. Note that doing this allows us to change the VM network range more easily from the default for these labs which is `192.168.2.0/24`
 
 Set up environment variables. Run the following:
 
@@ -44,9 +44,9 @@ echo $API_SERVICE
 The output should look like this. If you changed any of the defaults mentioned in the [prerequisites](./01-prerequisites.md) page, then addresses may differ.
 
 ```
-192.168.1.20
-192.168.1.21
-192.168.1.10
+192.168.2.20
+192.168.2.21
+192.168.2.10
 10.96.0.0/24
 10.96.0.1
 ```

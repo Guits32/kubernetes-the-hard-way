@@ -130,8 +130,8 @@ sudo ETCDCTL_API=3 etcdctl member list \
 > output
 
 ```
-45bf9ccad8d8900a, started, master-2, https://192.168.1.21:2380, https://192.168.1.21:2379
-54a5796a6803f252, started, master-1, https://192.168.1.20:2380, https://192.168.1.20:2379
+45bf9ccad8d8900a, started, master-2, https://192.168.2.21:2380, https://192.168.2.21:2379
+54a5796a6803f252, started, master-1, https://192.168.2.20:2380, https://192.168.2.20:2379
 ```
 
 Reference: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#starting-etcd-clusters
