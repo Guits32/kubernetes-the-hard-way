@@ -469,15 +469,9 @@ SUBJ_APIKC="Subject:CN=kube-apiserver-kubelet-client,O=system:masters"
 case $choice in
 
   1)
-    if ! [ "${HOST}" = "master-1" -o "${HOST}" = "master-2" ]
-    then
-        printf "${FAILED}Must run on master-1 or master-2${NC}\n"
-        exit 1
-    fi
-
     echo -e "The selected option is $choice, proceeding the certificate verification of Master node"
 
-    CERT_LOCATION=$HOME
+    CERT_LOCATION="/home/gaufrere/workspace/kubernetes/kubernetes-the-hard-way/assets/certificates"
     check_cert_and_key "ca" $SUBJ_CA $CERT_ISSUER
     check_cert_and_key "kube-apiserver" $SUBJ_API $CERT_ISSUER
     check_cert_and_key "kube-controller-manager" $SUBJ_KCM $CERT_ISSUER
@@ -485,12 +479,9 @@ case $choice in
     check_cert_and_key "service-account" $SUBJ_SA $CERT_ISSUER
     check_cert_and_key "apiserver-kubelet-client" $SUBJ_APIKC $CERT_ISSUER
     check_cert_and_key "etcd-server" $SUBJ_ETCD $CERT_ISSUER
+    check_cert_and_key "admin" $SUBJ_ADMIN $CERT_ISSUER
+    check_cert_and_key "kube-proxy" $SUBJ_KP $CERT_ISSUER
 
-    if [ "${HOST}" = "master-1" ]
-    then
-        check_cert_and_key "admin" $SUBJ_ADMIN $CERT_ISSUER
-        check_cert_and_key "kube-proxy" $SUBJ_KP $CERT_ISSUER
-    fi
     ;;
 
   2)
