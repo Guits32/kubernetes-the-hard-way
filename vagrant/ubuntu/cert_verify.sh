@@ -485,11 +485,11 @@ case $choice in
     ;;
 
   2)
-    if ! [ "${HOST}" = "master-1" -o "${HOST}" = "master-2" ]
-    then
-        printf "${FAILED}Must run on master-1 or master-2${NC}\n"
-        exit 1
-    fi
+    # if ! [ "${HOST}" = "master-1" -o "${HOST}" = "master-2" ]
+    # then
+    #     printf "${FAILED}Must run on master-1 or master-2${NC}\n"
+    #     exit 1
+    # fi
 
     check_cert_adminkubeconfig
     check_kubeconfig_exists "kube-controller-manager" $HOME
