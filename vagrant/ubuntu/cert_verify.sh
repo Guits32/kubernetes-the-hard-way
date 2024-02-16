@@ -13,7 +13,7 @@ MASTER_1=$(dig +short master-1)
 MASTER_2=$(dig +short master-2)
 WORKER_1=$(dig +short worker-1)
 WORKER_2=$(dig +short worker-2)
-LOADBALANCER=$(dig +short loadbalancer)
+LOADBALANCER=$(dig +short kubernetes-ha-lb)
 LOCALHOST="127.0.0.1"
 
 # All Cert Location
